@@ -35,3 +35,5 @@ Licencja
 --------
 
 Autor udostępnia szablon jako *public domain*.
+
+Pliki `logo_pollub.eps` oraz `logo_pollub.pdf` zawierają grafikę będącą niezbywalną własnością Politechniki Lubelskiej.
