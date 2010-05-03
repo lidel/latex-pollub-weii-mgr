@@ -1,0 +1,17 @@
+digraph G {
+    rankdir=LR;
+    graph [fontname=Lucida Console];
+    node  [fontname=Lucida Console];
+    item1   [label="Item 1",shape="box"];
+    item2   [label="Item 2",shape="box"];
+    item3   [label="Item 3",shape="box"];
+
+    subgraph cluster0 {
+        label="Group";
+        item1 -> item2;
+    }
+
+    item2 -> item3;
+
+}
+
