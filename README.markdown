@@ -13,6 +13,11 @@ Funkcje
 - Specyficzne wytyczne WEiI dotyczące numerowania figur, tabel, równań oraz listingów.
 - Polskie zasady typograficzne zawarte w klasie `mwart`.
 
+Demo
+----
+
+Prosta demonstracja działania szablonu znajduje się w wygenerowanym za jego pomocą pliku `mgr.pdf`.
+
 Zależności
 ----------
 
