@@ -3,16 +3,16 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.\cite{test1} Morbi sodales odio ac arcu facilisis sit amet ornare arcu rutrum.\cite{test1,test2}
 
 \begin{enumerate}
-  \item{Raz}
-  \item{Dwa}
-  \item{Trzy}
+  \item{Cum sociis natoque penatibus et magnis dis parturient montes.}
+  \item{Aliquam tincidunt urna.}
+  \item{Nulla ullamcorper vestibulum turpis.}
 \end{enumerate}
 
 \lipsum[2]
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=\textwidth]{demo}
+  \includegraphics[width=.75\textwidth,trim={0 1cm 0 1cm}]{demo}
   \caption[Przykładowy rysunek]%
   {Przykładowy rysunek wygenerowany przez \emph{Graphviz}.}
 \end{figure}
@@ -98,6 +98,17 @@ def create_search_result(request):
 
 \lipsum[11]
 
+
+\begin{description}
+  \item[Doneci]\hfill\\
+    {Maecenas urna mi, suscipit in, placerat ut, vestibulum ut, massa. Fusce ultrices nulla et nisl.}
+  \item[Aliquam]\hfill\\
+    {\lipsum[15]}
+  \item[Fusce]\hfill\\
+    {\lipsum[14]}
+\end{description}
+
+
 \begin{table}[h]
   \center
   \caption{Przykładowa tabela}
@@ -118,4 +129,3 @@ def create_search_result(request):
 \end{equation}
 
 \lipsum[13]
-
