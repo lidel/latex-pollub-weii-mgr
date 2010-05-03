@@ -1,0 +1,68 @@
+% pliki w unicode, polskie zasady typograficzne
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+% wymiary wg. wytycznych pollub
+\usepackage[left=35mm,right=20mm,top=25mm,bottom=20mm,nohead]{geometry}
+
+% inne zależności
+\usepackage[bookmarks=false,pdfborder={0 0 0}]{hyperref}
+\usepackage{listings}
+\renewcommand{\lstlistlistingname}{Spis listingów} % spolszczenie
+%\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{{./gfx/}{./dot/}}
+
+\usepackage{setspace}
+\onehalfspacing
+
+% zerowanie licznika przy 'figure','table','equation' w kazdym rozdziale
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\numberwithin{equation}{section}
+% licznik lstlisting z uwagi na specyfikę implementacji został zdefiniowany za  \begin{document}
+
+% zerowanie licznika 'footnote' na każdej stronie
+\usepackage[perpage]{zref}
+\zmakeperpage{footnote}
+
+% dodatkowe 'ciasne' wypunktowania
+\newenvironment{packed_itemize}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\newenvironment{packed_enumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+% globalne ustawienia listingów
+\usepackage{textcomp} % wymagane przez upquote poniżej
+\lstset{ %
+  numbers=left,
+  %xleftmargin=1.5em,
+  stepnumber=1,
+  numberstyle=\scriptsize,
+  basicstyle=\ttfamily\small,
+  %basicstyle=\small,
+  %stringstyle=\ttfamily,
+  keywordstyle=\bfseries\underbar,
+  captionpos=t,
+  breaklines=true,
+  frame=leftline,
+  %showspaces=true,
+  breaklines=true,
+  upquote=true,
+  %resetmargins=true;
+  %float=[p!],
+  %boxpos=t,
+  %frameround=fftt,
+}
+
+% generator używany przez praca/demo.tex
+\usepackage{lipsum}

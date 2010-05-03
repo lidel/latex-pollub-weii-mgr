@@ -1,0 +1,35 @@
+% jednostronna finalna wersja 12pt
+\documentclass[12pt, a4paper, oneside]{mwart}% http://www.mimuw.edu.pl/~wolinski/mwcls.html
+
+% poglądowa dla promotora
+%\documentclass[10pt, a4paper, oneside]{article}
+
+% dwustronna wersja 10pt wymagana przez komisję
+%\documentclass[10pt, a4paper, twoside]{article}
+
+% Ustawienia
+\input{inc/settings.tex}
+
+\begin{document}
+\numberwithin{lstlisting}{section}
+\singlespacing
+% Strona tytułowa
+
+\input{inc/front.tex} % tu dodajemy też wymagane przez uczelnię oświadczenie
+\onehalfspacing
+
+% Treść pracy
+\input{praca/demo.tex}
+
+% Literatura
+\input{praca/bibliografia.tex}
+
+% Załączniki
+%\appendix
+%\input{praca/appendix.tex}
+
+% Spisy końcowe
+\input{inc/back.tex}
+
+\end{document}
+
