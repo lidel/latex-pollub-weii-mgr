@@ -48,3 +48,9 @@ Autor udostępnia szablon jako *public domain*.
 
 
 Pliki `logo_pollub.eps` oraz `logo_pollub.pdf` zawierają grafikę będącą niezbywalną własnością Politechniki Lubelskiej.
+
+
+Aktualizacje
+------------
+
+Najnowsza wersja szablonu jest zawsze dostępna na stronie projektu: <http://github.com/lidel/latex-pollub-weii-mgr>
