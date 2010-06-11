@@ -3,10 +3,20 @@
 \usepackage[utf8]{inputenc}
 
 % wymiary wg. wytycznych pollub
-\usepackage[left=35mm,right=20mm,top=25mm,bottom=20mm,nohead]{geometry}
+\usepackage[left=35mm,right=20mm,top=25mm,bottom=20mm]{geometry}
 
-% inne zależności
-\usepackage[bookmarks=false,pdfborder={0 0 0}]{hyperref}
+% klikalne linki w PDF
+\usepackage{hyperref}
+% warto odkomentować oraz uzupełnić poniższe pola dokumentu PDF,
+% jeżeli planowana jest publikacja elektroniczna pracy
+\hypersetup{
+  bookmarks=true,
+  pdfborder={0 0 0},
+%  pdftitle={Temat Pracy},
+%  pdfauthor={Autorj},
+%  pdfkeywords={Słowa, Kluczowe}
+}
+
 \usepackage{listings}
 \renewcommand{\lstlistlistingname}{Spis listingów} % spolszczenie
 %\usepackage{multicol}
@@ -27,19 +37,38 @@
 \usepackage[perpage]{zref}
 \zmakeperpage{footnote}
 
-% dodatkowe 'ciasne' wypunktowania
-\newenvironment{packed_itemize}{
-\begin{itemize}
-  \setlength{\itemsep}{1pt}
-  \setlength{\parskip}{0pt}
-  \setlength{\parsep}{0pt}
-}{\end{itemize}}
-\newenvironment{packed_enumerate}{
-\begin{enumerate}
-  \setlength{\itemsep}{1pt}
-  \setlength{\parskip}{0pt}
-  \setlength{\parsep}{0pt}
-}{\end{enumerate}}
+% alternatywne czcionki (preferowane są kroje szeryfowe)
+%\usepackage{concmath} % http://www.tug.dk/FontCatalogue/ccr/
+%\usepackage{ccfonts,eulervm}
+%\usepackage[charter]{mathdesign}
+%\usepackage{fourier}
+%\usepackage{qtimes} % Times
+
+% nagłówki -- fancy header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{12pt}
+\renewcommand{\headrulewidth}{0.2pt}
+\setlength{\headsep}{6pt}
+
+% reset
+\fancyhf{}
+
+% stopka
+\fancyfoot[RO, LE] {\thepage}
+
+% nagłówek
+\fancyhead[LE,RO]{\scriptsize\slshape \rightmark}
+\fancyhead[LO,RE]{\scriptsize\scshape \leftmark}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}} % brak numeru przy nazwie rozdziału w nagłówku
+\renewcommand{\subsectionmark}[1]{\markright{\thesubsection. #1}{}} % fix brakującej kropki po numerze podrozdziału w nagłówku
+
+%  plain page
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[RO, LE] {\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
 
 % globalne ustawienia listingów
 \usepackage{textcomp} % wymagane przez upquote poniżej
@@ -55,14 +84,17 @@
   captionpos=t,
   breaklines=true,
   frame=leftline,
-  %showspaces=true,
   breaklines=true,
   upquote=true,
-  %resetmargins=true;
-  %float=[p!],
-  %boxpos=t,
-  %frameround=fftt,
 }
 
 % generator używany przez praca/demo.tex
 \usepackage{lipsum}
+
+% prosty skrot tworzacy paragrafy z~numerowanymi przykladami \przyklad -> Przyklad 4.2:
+\newcommand{\przyklad}{
+  \refstepcounter{przyklad}
+  \paragraph{Przykład~\theprzyklad:}
+}
+\newcounter{przyklad}
+\numberwithin{przyklad}{section} % numerowanie wg. wytycznych

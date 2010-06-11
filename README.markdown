@@ -16,7 +16,7 @@ Funkcje
 Demo
 ----
 
-Prosta demonstracja działania szablonu znajduje się w wygenerowanym za jego pomocą pliku `mgr.pdf`.
+Prosta demonstracja działania szablonu znajduje się w wygenerowanym za jego pomocą pliku `mgr.pdf` ([podgląd](https://docs.google.com/viewer?url=http://github.com/lidel/latex-pollub-weii-mgr/raw/master/mgr.pdf)).
 
 Zależności
 ----------

@@ -10,7 +10,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.\cite{test1} Morbi sodal
 
 \lipsum[2]
 
-\begin{figure}[ht]
+\przyklad \lipsum[12] 
+
+\noindent Aliquam porttitor quam a lacus (\emph{Rys.~\ref{fig:gfx-demo-1}}).
+
+
+\begin{figure}[h!tb]
+  \label{fig:gfx-demo-1}
   \centering
   \includegraphics[width=.75\textwidth,trim={0 1cm 0 1cm}]{demo}
   \caption[Przykładowy rysunek]%
@@ -21,7 +27,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.\cite{test1} Morbi sodal
 
 \lipsum[3]
 
-\begin{table}[h]
+\begin{table}[h!tb]
   \center
   \caption{Przykładowa tabela}
   \label{my_table}
@@ -36,7 +42,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.\cite{test1} Morbi sodal
 
 \lipsum[4]
 
-\begin{figure}[ht]
+\begin{figure}[h!tb]
   \centering
   \includegraphics[width=5cm]{logo_pollub}
   \caption[Close up of \textit{Hemidactylus} sp.]%
@@ -46,7 +52,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.\cite{test1} Morbi sodal
 
 \lipsum[5]
 
-\begin{table}[h]
+\begin{table}[h!tb]
   \center
   \caption{Przykładowa tabela}
   \label{my_table}
@@ -73,11 +79,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.\cite{test1} Morbi sodal
 
 \lipsum[8]
 
+\cleardoublepage\thispagestyle{plain}
 \section{Morbi laoreet nunc}
 
 \lipsum[9]
 
-\begin{figure}[ht]
+\begin{figure}[h!tb]
   \centering
   \includegraphics[width=4cm]{logo_pollub}
   \caption[Close up of \textit{Hemidactylus} sp.]%
@@ -109,7 +116,7 @@ def create_search_result(request):
 \end{description}
 
 
-\begin{table}[h]
+\begin{table}[h!tb]
   \center
   \caption{Przykładowa tabela}
   \label{my_table}

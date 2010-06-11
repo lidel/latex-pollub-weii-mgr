@@ -1,17 +1,20 @@
-% jednostronna finalna wersja 12pt
-\documentclass[12pt, a4paper, oneside]{mwart}% http://www.mimuw.edu.pl/~wolinski/mwcls.html
+% O szablonie:
+% http://github.com/lidel/latex-pollub-weii-mgr#readme
 
-% poglądowa dla promotora
+% dwustronna finalna wersja 12pt
+\documentclass[12pt, a4paper, twoside]{mwart}% http://www.mimuw.edu.pl/~wolinski/mwcls.html
+
+% poglądowa jednostronna, np. dla promotora
 %\documentclass[10pt, a4paper, oneside]{mwart}
 
-% dwustronna wersja 10pt wymagana przez komisję
+% dwustronna wersja 10pt, np. dla komisji
 %\documentclass[10pt, a4paper, twoside]{mwart}
 
 % Ustawienia
 \input{inc/settings.tex}
 
 \begin{document}
-\numberwithin{lstlisting}{section}
+\numberwithin{lstlisting}{section} % koniecznie za \begin{document} z uwagi na implementację pakietu lstlisting
 
 % Strona tytułowa
 \singlespacing
@@ -19,6 +22,7 @@
 \onehalfspacing
 
 % Treść pracy
+\cleardoublepage\thispagestyle{plain} % nowy rozdział powinien zawsze zaczynać się na nieparzystej stronie
 \input{praca/demo.tex}
 
 % Literatura
