@@ -12,6 +12,9 @@ Funkcje
 - Strona tytułowa zgodna z wytycznymi wydziału.
 - Specyficzne wytyczne WEiI dotyczące numerowania figur, tabel, równań oraz listingów.
 - Polskie zasady typograficzne zawarte w klasie `mwart`.
+- Wsparcie druku dwustronnego:
+  - lustrzany nagłówek oraz stopka,
+  - nowe rozdziały zawsze zaczynają się na nieparzystej stronie.
 
 Demo
 ----
