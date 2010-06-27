@@ -47,7 +47,7 @@ Autor zachęca wszystkich chętnych pasjonatów LaTeX do forkowania, rozwoju i n
 Licencja
 --------
 
-Autor udostępnia szablon jako *public domain*.
+Autor udostępnia szablon jako [public domain](http://unlicense.org/), więcej w pliku `UNLICENSE`.
 
 
 Pliki `logo_pollub.eps` oraz `logo_pollub.pdf` zawierają grafikę będącą niezbywalną własnością Politechniki Lubelskiej.
