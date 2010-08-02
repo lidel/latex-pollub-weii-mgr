@@ -25,7 +25,7 @@ Zależności
 ----------
 
 Szablon posiada minimalny zestaw zależności i powinien działać poprawnie z każdą aktualną dystrybucją TeX.
-Wymaga klasy `[mwart](http://www.mimuw.edu.pl/~wolinski/mwcls.html)`.
+Wymaga klasy [mwart](http://www.mimuw.edu.pl/~wolinski/mwcls.html).
 
 Został przetestowany z:
 
