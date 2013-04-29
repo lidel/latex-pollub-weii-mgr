@@ -88,6 +88,14 @@
   upquote=true,
 }
 
+% Naprawia problem z niedziałającą opcją lstset{breaklines = true}
+% Klasa dokumentu mwart zabrania łamania wierszy na dywizie i
+% w jakiś sposób uniemożliwia to również działanie łamania wierszy
+% wewnątrz lstlisting
+\usepackage{etoolbox}
+\AtBeginEnvironment{lstlisting}{\exhyphenpenalty = 0}
+\AfterEndEnvironment{lstlisting}{\exhyphenpenalty = 10000} % taka wartość jest ustawiona w klasie mwart
+
 % generator używany przez praca/demo.tex
 \usepackage{lipsum}
 
