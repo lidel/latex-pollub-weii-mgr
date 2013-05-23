@@ -88,7 +88,26 @@
   frame=leftline,
   breaklines=true,
   upquote=true,
-  extendedchars=false, % na problemy ze znakami unicode
+  extendedchars=true, % na problemy ze znakami unicode
+  literate =
+    {ą}{{\k{a}}}1
+    {Ą}{{\k{A}}}1
+    {ę}{{\k{e}}}1
+    {Ę}{{\k{E}}}1
+    {ó}{{\'o}}1
+    {Ó}{{\'O}}1
+    {ś}{{\'s}}1
+    {Ś}{{\'S}}1
+    {ł}{{\l{}}}1
+    {Ł}{{\L{}}}1
+    {ż}{{\.z}}1
+    {Ż}{{\.Z}}1
+    {ź}{{\'z}}1
+    {Ź}{{\'Z}}1
+    {ć}{{\'c}}1
+    {Ć}{{\'C}}1
+    {ń}{{\'n}}1
+    {Ń}{{\'N}}1
 }
 
 % Naprawia problem z niedziałającą opcją lstset{breaklines = true}
