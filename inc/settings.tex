@@ -10,18 +10,23 @@
 % warto odkomentować oraz uzupełnić poniższe pola dokumentu PDF,
 % jeżeli planowana jest publikacja elektroniczna pracy
 \hypersetup{
-  bookmarks=true,
-  pdfborder={0 0 0},
+%  bookmarks=true,
+   pdfborder={0 0 0},
 %  pdftitle={Temat Pracy},
 %  pdfauthor={Autorj},
 %  pdfkeywords={Słowa, Kluczowe}
 }
 
+% Naprawia problem z labelami obrazków, które muszą być wstawiane pod caption. Przez to link do obrazka przenosi do miejsca pod obrazkiem. Poniższe ustawienie powoduje przeniesienie do górnej krawędzi obrazka.
+\usepackage[hypcap]{caption}
+
 \usepackage{listings}
 \renewcommand{\lstlistlistingname}{Spis listingów} % spolszczenie
 %\usepackage{multicol}
 \usepackage{graphicx}
+\DeclareGraphicsExtensions{.eps}
 \graphicspath{{./gfx/}{./dot/}}
+\usepackage{epstopdf}
 
 \usepackage{setspace}
 \onehalfspacing
@@ -55,18 +60,23 @@
 \fancyhf{}
 
 % stopka
-\fancyfoot[RO, LE] {\thepage}
+\fancyfoot[RO, LE] {\thepage}						% dwustronny
+%\fancyfoot[C] {\thepage}							% jednostronny
 
 % nagłówek
-\fancyhead[LE,RO]{\scriptsize\slshape \rightmark}
-\fancyhead[LO,RE]{\scriptsize\scshape \leftmark}
+\fancyhead[LE,RO]{\scriptsize\slshape \rightmark}	% dwustronny
+\fancyhead[LO,RE]{\scriptsize\scshape \leftmark}	% dwustronny
+%\fancyhead[R]{\scriptsize\slshape \rightmark}		% jednostronny
+%\fancyhead[L]{\scriptsize\scshape \leftmark}		% jednostronny
+
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}} % brak numeru przy nazwie rozdziału w nagłówku
 \renewcommand{\subsectionmark}[1]{\markright{\thesubsection. #1}{}} % fix brakującej kropki po numerze podrozdziału w nagłówku
 
 %  plain page
 \fancypagestyle{plain}{
 \fancyhf{}
-\fancyfoot[RO, LE] {\thepage}
+\fancyfoot[RO, LE] {\thepage}						% dwustronny
+%\fancyfoot[C] {\thepage}							% jednostronny
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}}
 
@@ -86,7 +96,35 @@
   frame=leftline,
   breaklines=true,
   upquote=true,
+  extendedchars=true, % na problemy ze znakami unicode
+  literate =
+    {ą}{{\k{a}}}1
+    {Ą}{{\k{A}}}1
+    {ę}{{\k{e}}}1
+    {Ę}{{\k{E}}}1
+    {ó}{{\'o}}1
+    {Ó}{{\'O}}1
+    {ś}{{\'s}}1
+    {Ś}{{\'S}}1
+    {ł}{{\l{}}}1
+    {Ł}{{\L{}}}1
+    {ż}{{\.z}}1
+    {Ż}{{\.Z}}1
+    {ź}{{\'z}}1
+    {Ź}{{\'Z}}1
+    {ć}{{\'c}}1
+    {Ć}{{\'C}}1
+    {ń}{{\'n}}1
+    {Ń}{{\'N}}1
 }
+
+% Naprawia problem z niedziałającą opcją lstset{breaklines = true}
+% Klasa dokumentu mwart zabrania łamania wierszy na dywizie i
+% w jakiś sposób uniemożliwia to również działanie łamania wierszy
+% wewnątrz lstlisting
+\usepackage{etoolbox}
+\AtBeginEnvironment{lstlisting}{\exhyphenpenalty = 0}
+\AfterEndEnvironment{lstlisting}{\exhyphenpenalty = 10000} % taka wartość jest ustawiona w klasie mwart
 
 % generator używany przez praca/demo.tex
 \usepackage{lipsum}
