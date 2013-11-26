@@ -60,18 +60,23 @@
 \fancyhf{}
 
 % stopka
-\fancyfoot[RO, LE] {\thepage}
+\fancyfoot[RO, LE] {\thepage}						% dwustronny
+%\fancyfoot[C] {\thepage}							% jednostronny
 
 % nagłówek
-\fancyhead[LE,RO]{\scriptsize\slshape \rightmark}
-\fancyhead[LO,RE]{\scriptsize\scshape \leftmark}
+\fancyhead[LE,RO]{\scriptsize\slshape \rightmark}	% dwustronny
+\fancyhead[LO,RE]{\scriptsize\scshape \leftmark}	% dwustronny
+%\fancyhead[R]{\scriptsize\slshape \rightmark}		% jednostronny
+%\fancyhead[L]{\scriptsize\scshape \leftmark}		% jednostronny
+
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}} % brak numeru przy nazwie rozdziału w nagłówku
 \renewcommand{\subsectionmark}[1]{\markright{\thesubsection. #1}{}} % fix brakującej kropki po numerze podrozdziału w nagłówku
 
 %  plain page
 \fancypagestyle{plain}{
 \fancyhf{}
-\fancyfoot[RO, LE] {\thepage}
+\fancyfoot[RO, LE] {\thepage}						% dwustronny
+%\fancyfoot[C] {\thepage}							% jednostronny
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}}
 
